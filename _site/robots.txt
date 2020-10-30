@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4000/artyrcheek/sitemap.xml
+Sitemap: https://artyrcheek.github.io/artyrcheek.github.io/sitemap.xml
