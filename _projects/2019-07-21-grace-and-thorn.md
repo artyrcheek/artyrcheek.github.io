@@ -1,7 +1,7 @@
 ---
 title: Grace and Thorn
 subtitle: Rule breaking florist renowned for off-beat approach to floral and plant styling.
-tags: HTML SCSS Javascript Shopify
+tags: HTML SCSS Javascript Shopify Git
 linktext: Visit Website
 linkurl: https://graceandthorn.com/
 date: 2019-07-24 00:00:00

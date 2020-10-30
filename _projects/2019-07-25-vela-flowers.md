@@ -1,7 +1,7 @@
 ---
 title: Vela Flowers
 subtitle: Fresh, seasonal flower subscriptions that fit straight through the letterbox!
-tags: HTML SCSS Javascript Shopify
+tags: HTML SCSS Javascript Shopify Git
 linktext: Visit Website
 linkurl: https://velaflowers.co.uk/
 date: 2019-07-24 00:00:00

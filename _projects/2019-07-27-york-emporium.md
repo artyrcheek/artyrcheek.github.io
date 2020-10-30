@@ -1,7 +1,7 @@
 ---
 title: York Emporium
 subtitle: A modern responsive site for the award-winning York-based roastery.
-tags: HTML SCSS Javascript Shopify
+tags: HTML SCSS Javascript Shopify Git
 linktext: Visit Website
 linkurl: https://yorkemporium.co.uk/
 date: 2019-07-24 00:00:00
