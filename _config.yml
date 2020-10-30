@@ -1,7 +1,7 @@
 site: Arthur Cheek
 
-url: https://artyrcheek.github.io/
-baseurl: /artyrcheek.github.io
+url: https://artyrcheek.github.io/artyrcheek.github.io
+baseurl: 
 
 collections:
   pages:
