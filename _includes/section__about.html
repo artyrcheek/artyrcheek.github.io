@@ -1,0 +1,24 @@
+<section class="about">
+  {% if include.divider == true %}
+    <div class="wrap"><hr/></div>
+    {% endif %}
+  <div class="wrap grid">
+
+    <div class="about__image">
+      <img src="{{ '/images/profile-coloured.jpg' | relative_url }}" alt="">
+
+      {% include component-socials.html %}
+    </div>
+
+    <div class="about__content">
+      <h2 class="title">Hey, I’m Arthur, nice to meet you!</h2>
+      <p class="subtitle subtitle--light">I’m a <a href="https://Shopify.com">Shopify</a> developer with <a href="https://www.linkedin.com/in/arthur-cheek-009566150/">over 3 years </a>of front-end and back-end development experience under my belt.
+      </p>
+
+      <p>I love creating things that provide value, whether that be websites, applications, or even simple scripts. I aspire to build products that provide beautiful, performant experiences.</p>
+      <p>Shortly after leaving secondary school, I joined <a href="https://bravetheskies.com">BraveTheSkies</a>, an amazing shopify agency where I worked on interesting and meaningful e-commerce stores on a daily basis.</p>
+
+      <a href="#" class="cta button--fill contact-trigger js-contact">Get in Touch</a>
+    </div>
+  </div>
+</section>

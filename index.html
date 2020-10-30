@@ -1,0 +1,123 @@
+---
+layout: default
+overtitle: I love my job creating
+title: Great websites
+description:  Here are a few of my favourites
+featured_image: /images/social.jpg
+---
+
+<div class="page-home">
+
+	{% include section__about.html %}
+
+	{% if site.data.settings.hero_settings.background_image %}
+	<img src="{{ site.data.settings.hero_settings.background_image | relative_url }}" class="hero__background" draggable="false">
+	{% endif %}
+
+	<section class="hero">
+		<div class="wrap grid">
+			<div class="title">
+				<p class="subtitle">{{ page.overtitle }}</p>
+				<h1>{{ page.title }}</h1>
+			</div>
+
+			<p style="max-width: none; text-align: right;" class="intro subtitle--light">
+				{{ page.description }}
+				<a href="#" class="hero__cta button--fill contact-trigger js-contact">Get In Touch</a>
+			</p>
+		</div>
+	</section>
+  
+	<section class="listing">
+		<div class="wrap">
+
+			{% for project in site.projects reversed %}
+
+			{% if project.accent_color %}{% capture accent_color %}{{ project.accent_color }}{% endcapture %}{% endif %}
+
+			<article class="project__preview">
+        <h3 class="project__title">
+          <a {% if project.linkurl %}href="{{ project.linkurl }}"{% endif %} style="--accent: {{ accent_color }}">{{ project.title }}</a>
+          <p>
+            {% for tag in project.tags %}
+              <span class="button--text" href="">{{tag}}</span>{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+          </p>
+        </h3>
+
+				<div class="project__images owl-carousel" style="--accent: {{ accent_color }}">
+					{% for image in project.gallery_images %}
+            <a {% if project.linkurl %}href="{{ project.linkurl }}"{% endif %}><img src="{{ '/images/projects/' | relative_url}}{{ image }}" alt="" class="project__image"></a>
+					{% endfor %}
+				</div>
+
+				<div class="project__content grid" style="border-color: {{ accent_color }}">
+					<p class="project__subtitle subtitle--light">{{ project.subtitle }}</p>
+					<p class="project__description --small">
+						{{ project.description }}
+            {% if project.linkurl %}
+              <a href="{{project.linkurl}}" class="project__link button--text --right" style="color: {{ accent_color }}; --color-var: {{ accent_color }}">
+              {% if project.linktext %}{{project.linktext}}{% else %}View{% endif %}
+              </a>
+            {% endif %}
+					</p>
+				</div>
+			</article>
+
+			{% endfor %}
+
+			<article class="project__preview">
+        <h3 class="project__title">
+          <a href="{{ project.url | relative_url }}" style="--accent: {{ accent_color }}">Other sites I have worked on</a>
+        </h3>
+
+        <p>
+          At 
+          <a class="button--text" href="https://bravetheskies.com/">BraveTheSkies</a>,
+          I've had the privelige to work on a load of great sites including
+          <br>
+          <a class="button--text" href="https://www.nicceclothing.com/">Nicce Clothing</a>, 
+          <a class="button--text" href="https://www.manukadoctor.co.uk/">Manuka Doctor</a>, 
+          <a class="button--text" href="https://www.beargrylls.com/">Bear Gyrlls</a>, 
+          <a class="button--text" href="https://www.thechimpstore.com/">Chimp Store</a>, 
+          <a class="button--text" href="https://lightwaverf.com/">Lightwave</a>, 
+          <a class="button--text" href="https://www.indcsn.com/">indcsn</a>, 
+          <a class="button--text" href="https://thehundreds.uk/">The Hundreds UK</a>, 
+          <a class="button--text" href="https://dukeanddexter.com/">Duke and Dexter</a>, 
+          <a class="button--text" href="https://www.truevintage.com/">True Vintage</a>
+        </p>
+
+        {% comment %}
+				<div class="project__content grid" style="border-color: {{ accent_color }}">
+					<p class="project__subtitle subtitle--light">{{ project.subtitle }}</p>
+					<p class="project__description --small">
+						{{ project.description }}
+            {% if project.linkurl %}
+              <a href="{{project.linkurl}}" class="project__link button--text --right" style="color: {{ accent_color }}; --color-var: {{ accent_color }}">
+              {% if project.linktext %}{{project.linktext}}{% else %}View{% endif %}
+              </a>
+            {% endif %}
+					</p>
+				</div>
+        {% endcomment %}
+			</article>
+		</div>
+	</section>
+
+	<section class="recent-posts">
+		<div class="wrap grid">
+			<header class="recent-posts__header">
+				<h4>Recent blog posts</h4>
+				<a href="{{ '/blog' | relative_url }}" class="action button--text--accent --right">All Posts</a>
+			</header>
+
+			<div class="recent-posts__list grid">
+				{% for post in site.posts limit: 3 %}
+				{% include component__post-preview.html %}
+				{% endfor %}
+			</div>
+
+			<a href="{{ '/blog' | relative_url }}" class="action-bottom button--text--accent --right">All Posts</a>
+		</div>
+	</section>
+</div>
