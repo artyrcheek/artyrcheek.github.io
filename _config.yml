@@ -1,6 +1,6 @@
 site: Made Jekyll Theme
 
-url: artyrcheek.github.io
+url: http://artyrcheek.github.io
 baseurl: /artyrcheek
 
 collections:
