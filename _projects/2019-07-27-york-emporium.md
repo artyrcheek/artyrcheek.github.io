@@ -5,7 +5,7 @@ tags: HTML SCSS Javascript Shopify Git
 linktext: Visit Website
 linkurl: https://yorkemporium.co.uk/
 date: 2019-07-24 00:00:00
-description: York Emporium was set up in 2010 to serve the ever increasing need for roasted coffee & tea in Yorkshire and beyond. This site includes many advanced shopify theme customizations, such as the dynamic filter visible before the fold on the homepage.
+description: York Emporium was set up in 2010 to serve the ever increasing need for roasted coffee & tea in Yorkshire and beyond. This site includes many advanced Shopify theme customizations, such as the dynamic filter visible before the fold on the homepage.
 featured_image: notyet.png
 accent_color: '#4C60E6'
 gallery_images:
